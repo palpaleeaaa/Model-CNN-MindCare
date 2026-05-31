@@ -1,0 +1,17 @@
+numpy
+pandas
+scikit-learn
+imbalanced-learn
+tensorflow
+keras
+matplotlib
+seaborn
+opencv-python
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pillow
+requests
+anthropic
+tensorboard
