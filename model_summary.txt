@@ -1,0 +1,64 @@
+Model: "FER_ResNet50_FunctionalAPI"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_image (InputLayer)    [(None, 224, 224, 3)]     0         
+                                                                 
+ random_flip (RandomFlip)    (None, 224, 224, 3)       0         
+                                                                 
+ random_rotation (RandomRot  (None, 224, 224, 3)       0         
+ ation)                                                          
+                                                                 
+ random_zoom (RandomZoom)    (None, 224, 224, 3)       0         
+                                                                 
+ random_translation (Random  (None, 224, 224, 3)       0         
+ Translation)                                                    
+                                                                 
+ resnet50 (Functional)       (None, 7, 7, 2048)        23587712  
+                                                                 
+ cnn_block1_conv (Conv2D)    (None, 7, 7, 256)         4718848   
+                                                                 
+ cnn_block1_bn (BatchNormal  (None, 7, 7, 256)         1024      
+ ization)                                                        
+                                                                 
+ cnn_block1_relu (Activatio  (None, 7, 7, 256)         0         
+ n)                                                              
+                                                                 
+ cnn_block1_maxpool (MaxPoo  (None, 3, 3, 256)         0         
+ ling2D)                                                         
+                                                                 
+ cnn_block2_conv (Conv2D)    (None, 3, 3, 128)         295040    
+                                                                 
+ cnn_block2_bn (BatchNormal  (None, 3, 3, 128)         512       
+ ization)                                                        
+                                                                 
+ cnn_block2_relu (Activatio  (None, 3, 3, 128)         0         
+ n)                                                              
+                                                                 
+ cnn_block2_maxpool (MaxPoo  (None, 1, 1, 128)         0         
+ ling2D)                                                         
+                                                                 
+ global_avg_pool (GlobalAve  (None, 128)               0         
+ ragePooling2D)                                                  
+                                                                 
+ dense_512 (Dense)           (None, 512)               66048     
+                                                                 
+ bn_512 (BatchNormalization  (None, 512)               2048      
+ )                                                               
+                                                                 
+ dropout_512 (Dropout)       (None, 512)               0         
+                                                                 
+ dense_256 (Dense)           (None, 256)               131328    
+                                                                 
+ bn_256 (BatchNormalization  (None, 256)               1024      
+ )                                                               
+                                                                 
+ dropout_256 (Dropout)       (None, 256)               0         
+                                                                 
+ predictions (Dense)         (None, 4)                 1028      
+                                                                 
+=================================================================
+Total params: 28804612 (109.88 MB)
+Trainable params: 5214596 (19.89 MB)
+Non-trainable params: 23590016 (89.99 MB)
+_________________________________________________________________

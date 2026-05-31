@@ -1,0 +1,25 @@
+.vscode/
+class_distribution_after.png
+class_distribution_before.png
+facial_expression_model.keras
+model.weights.h5
+sample_images.png
+ai_en/*
+faceread/*
+cekgpu.py
+uts
+training/archive/facial_expression_cnn.py
+
+facial_expression_savedmodel/*
+face_recog/*
+venv/*
+ai_en/
+__pycache__/*
+.env
+
+# Data and models
+Dataset/
+models/
+saved_models/
+logs/
+*.db
